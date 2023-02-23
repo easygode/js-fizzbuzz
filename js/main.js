@@ -4,10 +4,19 @@
 //1. creo un ciclo che genera numeri da 1 a 100
 
 let i = 0;
+let div = '';
+let h2 = '';
 
 for (let i = 1; i < 101; i++) {
     console.log (i);
    }
+
+   const divBox = document.createElement('div');
+   divBox.classList.add(box);
+
+   const divNum = document.createElement('h2');
+   divNum.classList.add(box-num);
+   divBox.append(divNum);
 
 //2. creo variabile per ul nel HTML
 const ul = document.querySelector('ul.list');
@@ -22,19 +31,22 @@ let buzz = 1 % 5;
 
    if (i % 15 === 0) {
     console.log("FizzBuzz");
-    li.append('FizzBuzz');
+    divBox.classList.add('FizzBuzz')
+    h2.append('FizzBuzz');
 
    } else if (i % 3 === 0) {
     console.log('Fizz');
-    li.append('Fizz');
+    divBox.classList.add('Fizz');
+    h2.append('Fizz');
 
    } else if (i % 5 === 0) {
+    divBox.classList.add('Buzz');
     console.log('Buzz');
     li.append('Buzz');
 
    } else {
     console.log(i);
-    li.append(i);
+    h2.append(i);
    }
 
    li.addEventListener('cklick', function() {
