@@ -13,11 +13,13 @@ for(let i = 1; i <= 100; i=i+1){
 // stampo Buzz se il numero è divisibile per 5.
    
 const item = document.createElement('div');
+item.classList.add('item');
 container.append(item);
 
    if(i % 3 === 0 && i % 5 === 0){
    console.log('FizzBuzz');
    item.append('FizzBuzz');
+   item.classList.add('fizzbuzz');
    // opzione inner HTML item.innerHTML = 'FizzBuzz';
    // opzione innerText item.innerText = 'FizzBuzz';
 
@@ -26,11 +28,13 @@ container.append(item);
       item.append('Fizz');
       // opzione inner HTML item.innerHTML = 'Fizz';
       // opzione innerText item.innerText = 'Fizz';
+      item.classList.add('fizz');
    } else if(i % 5 === 0){
       console.log('Buzz');
       item.append('Buzz');
       // opzione inner HTML item.innerHTML = 'Buzz';
       // opzione innerText item.innerText = 'Buzz';
+      item.classList.add('buzz');
    } else {
    console.log(i);
    item.append(i);
